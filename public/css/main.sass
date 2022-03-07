@@ -1,0 +1,109 @@
+$blue: #0c2461
+$text-color: #fad390
+$hover-color: #f6b93b
+$line-color: #e58e26
+$title: #3c6382
+$card: linear-gradient(0deg, rgba(169,2,245,1) 10%, rgba(250,109,2,1) 86%)
+$blue-skay: #82ccdd
+$card-back:linear-gradient(0deg, rgba(2,65,245,1) 10%, rgba(56,224,27,1) 86%)
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Montserrat'
+body
+
+.nav-bar
+    display: flex
+    justify-content: center
+    height: 40px
+    align-items: end
+    a
+        text-decoration: none
+        margin-left: 15px
+        color: $title
+        &:hover
+            color: $hover-color
+            background: #000000
+            border-radius: 10px
+            font-size: 18px
+            transform: perspective(100px) rotateY(45deg)
+            transition: transform 0.5s ease 0s
+header
+
+    height: 200px
+
+    .title
+        display: flex
+        justify-content: center
+        margin-top: 30px
+        color: $title
+        text-shadow: 4px 2px 2px #26c2c799
+    .line
+        width: 50%
+        margin: 0 auto
+        margin-top: 15px
+        color: $line-color
+
+    .sub-title
+        margin-top: 20px
+        display: flex
+        justify-content: center
+        font-weight: bold
+
+.flip-card
+    
+    background-color: transparent
+    width: 300px
+    height: 300px
+    margin: 0 auto
+    perspective: 1000px
+    margin-bottom: 20px
+    .flip-card-inner
+        position: relative
+        width: 100%
+        height: 100%
+        text-align: center
+        transition: transform 0.6s
+        transform-style: preserve-3d        
+        &:hover
+            transform: rotateY(180deg)
+        .flip-front-back
+            position: absolute
+            width: 100%
+            height: 100%
+            backface-visibility: hidden 
+            background: $card 
+            border-radius: 10px  
+            box-shadow: 10px 10px 15px 1px rgba(0,0,0,0.66)
+            h2
+                margin-top: 40%
+                color: $text-color
+                font-size: 36px
+        .flip-card-back
+            background: $card-back
+            transform: rotateY(180deg)
+            img
+                margin-top: 20px
+                border-radius: 50%
+                height: 80px
+                width: 80px
+                border: 5px solid $text-color
+            .back-title
+                color: $blue
+                text-shadow: 4px 2px 2px #26c2c799
+            .text            
+                top: 10px
+                   
+
+footer
+   
+    height: 100px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $title
+    color: $text-color
+    h3
+        font-size: 40px

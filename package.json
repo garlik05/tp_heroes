@@ -1,0 +1,14 @@
+{
+  "name": "tp_express",
+  "version": "1.0.0",
+  "description": "crea un local host y navega en distintas paginas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pablo Rey",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
